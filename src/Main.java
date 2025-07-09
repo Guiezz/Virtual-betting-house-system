@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Admin admin = new Admin(
@@ -11,7 +14,21 @@ public class Main {
                 1000.0
         );
 
+        List<User> users = new ArrayList<>();
+        List<String> passwords = new ArrayList<>();
+
+        users.add(admin);
+        passwords.add("password123");
+        users.add(gambler);
+        passwords.add("password456");
+
         try {
+            for (User user : users) {
+                user.authenticate(passwords.get(users.indexOf(user)));
+                System.out.println();
+            }
+
+
             gambler.deposit(200.0);
 
             System.out.println();

@@ -1,7 +1,6 @@
 import types.TransactionType;
 import utils.CurrencyFormatter;
 
-import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -80,7 +79,7 @@ public class Gambler extends User {
     @Override
     public void authenticate(String password) {
         super.authenticate(password);
-        System.out.println("Autenticação bem-sucedida para o apostador: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("[POST] Autenticação bem-sucedida para o apostador: " + this.getFirstName() + " " + this.getLastName());
     }
 
     public void deposit(double amount) {

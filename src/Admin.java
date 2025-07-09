@@ -28,7 +28,7 @@ public class Admin extends User {
     @Override
     public void authenticate(String password) {
         super.authenticate(password);
-        System.out.println("Autenticação bem-sucedida para o administrador: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("[POST] Autenticação bem-sucedida para o administrador: " + this.getFirstName() + " " + this.getLastName());
     }
 
     public Event createEvent(Event event) {
